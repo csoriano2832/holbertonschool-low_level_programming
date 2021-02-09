@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * times_table - prints the 9 times table, starting with 0.
+ * print_row - prints the rows of the 9 times table
+ * @mult_row: number which idx will be multiplied by
  *
- * Return: Always 0.
+ * Return: null
  */
 void print_row(int mult_row)
 {
@@ -35,6 +36,11 @@ void print_row(int mult_row)
 	}
 }
 
+/**
+ * times_table - prints the columns of the 9 times table
+ *
+ * Return: null
+ */
 void times_table(void)
 {
 	int column;
