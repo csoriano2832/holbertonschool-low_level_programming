@@ -14,7 +14,7 @@ void print_times_table(int width)
 {
 	int row, column, result;
 
-	if (width > 0 && width < 15)
+	if (width >= 0 && width < 15)
 	{
 		for (column = 0; column <= width; column++)
 		{
