@@ -18,7 +18,7 @@ int main(void)
 				putchar(' ');
 				putchar((secondDigit / 10) + '0');
 				putchar((secondDigit % 10) + '0');
-				if (!(firstDigit == 98  && secondDigit == 99 ))
+				if (!(firstDigit == 98  && secondDigit == 99))
 				{
 					putchar(',');
 					putchar(' ');
