@@ -1,15 +1,16 @@
 #include <stdio.h>
 
 /**
+ * main - print the first 50 fibonacci numbers
  *
- *
+ * Return: always 0
  */
 int main(void)
 {
 	int i;
-	long a = 1;
-	long b = 2;
-	long fib = 2;
+	long a = 0;
+	long b = 1;
+	long fib = 1;
 
 	for (i = 1; i <= 50; i++)
 	{
