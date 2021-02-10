@@ -11,7 +11,7 @@ int main(void)
 	long a = 0;
 	long b = 1;
 	long fib = 1;
-	long sum = fib;
+	long sum = 0;
 
 	for (i = 1; i <= 32; i++)
 	{
