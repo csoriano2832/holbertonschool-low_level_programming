@@ -19,7 +19,7 @@ void print_triangle(int size)
 		{
 			for (j = 0; j < pointer; j++)
 			{
-				_putchar('.');
+				_putchar(' ');
 			}
 			for (k = pointer; k < size; k++)
 				_putchar('#');
