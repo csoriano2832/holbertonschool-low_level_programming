@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int fact, prime_fact; 
+	int fact, prime_fact;
 	long num;
 
 	num = 612852475143;
@@ -22,6 +22,6 @@ int main(void)
 			}
 		}
 	}
-	printf("%d\n", fact);
+	printf("%d\n", prime_fact);
 	return (0);
 }
