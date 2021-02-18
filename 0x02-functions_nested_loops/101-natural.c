@@ -7,20 +7,15 @@
  */
 int main(void)
 {
-	int index, mult3, mult5, sum;
+	int index, mult, sum;
 
 	sum = 0;
 	for (index = 1; index < 1024; index++)
 	{
-		if (index % 3 == 0)
+		if (index % 3 == 0 || index % 5 == 0)
 		{
-			mult3 = index;
-			sum = sum + mult3;
-		}
-		else if (index % 5 == 0)
-		{
-			mult5 = index;
-			sum = sum + mult5;
+			mult = index;
+			sum += mult;
 		}
 	}
 	printf("%i\n", sum);
