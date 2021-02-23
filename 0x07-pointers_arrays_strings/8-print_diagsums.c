@@ -13,7 +13,8 @@ void print_diagsums(int *a, int size)
 	sum1 = 0;
 	sum2 = 0;
 
-	for (idx = 0; idx < size; idx++)
+	idx = 0;
+	while (idx < size)
 	{
 		sum1 += a[((size + 1) * idx)];
 		idx++;
