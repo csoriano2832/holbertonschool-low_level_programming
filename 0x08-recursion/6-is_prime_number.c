@@ -3,7 +3,7 @@
 /**
  * check_prime - check for prime numbers
  * @n: numbers to check
- * @num: numbers to use to check if it's prime
+ * @prime: numbers to use to check if it's prime
  *
  * Return: if number is prime or not
  */
