@@ -1,55 +1,54 @@
 #include "holberton.h"
 
 /**
- * palindrome_check - check for palindrome
- * @s: reverse string
- * @i: normal string
+ * check_palindrome - check for palindrome
+ * @str: string
+ * @idx: starting point
+ * @len: length of string
  *
  * Return: 1 if it's palindrome 0 if it's not
  */
-int palindrome_check(char *s, char *i)
+int check_palindrome(char *str, int idx, int len)
 {
-	if (*s != *i)
+	if (idx == len)
+		return (1);
+
+	if (str[idx] != str[len - (idx + 1)])
 		return (0);
 
-	if (*s == *i)
-		palindrome_check(s - 1, i + 1);
-	return (1);
-
+	return (check_palindrome(str, idx + 1, len));
 }
 
 /**
- * palindrome_mover - reverses string
- * @s: reverse string
- * @i: normal string
+ * _strlen - gets length of string
+ * @str: string
  *
  * Return: 1 if it's palindrome 0 if it's not
  */
-int palindrome_mover(char *s, char *i)
+int _strlen(char *str)
 {
-	int count = 0;
+	int len;
 
-	if (*s == '\0')
-		palindrome_mover(s + 1, i);
+	if (*str == '\0')
+		return (0);
 
-	count = count + palindrome_check(s - 1, i);
-	return (count);
+	len = _strlen(str + 1);
+	return (len + 1);
 }
 
 /**
  * is_palindrome - check for palindrome
- * @s: reverse string
+ * @str: reverse string
  *
  * Return: 1 if it's palindrome 0 if it's not
  */
-int is_palindrome(char *s)
+int is_palindrome(char *str)
 {
-	char *i;
+	int len = _strlen(str);
+	int idx = 0;
 
-	i = s;
-
-	if (*s == '\0')
+	if (*str == '\0')
 		return (1);
 
-	return (palindrome_mover(s, i));
+	return (check_palindrome(str, idx, len));
 }
