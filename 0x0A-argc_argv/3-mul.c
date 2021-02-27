@@ -2,9 +2,12 @@
 #include <stdlib.h>
 
 /**
+  * main - multiplies two numbers
+  * @argc: the number of arguments passed into it
+  * @argv: pointer to char array of arguments passed into it
   *
-  *
-  *
+  * Return: 0 on success.
+  * Otherwise, return 1.
   */
 int main(int argc, char *argv[])
 {
