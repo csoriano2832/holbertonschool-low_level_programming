@@ -2,9 +2,10 @@
 #include "holberton.h"
 
 /**
+  * _strdup - returns a duplicate of a given string
+  * @str: a string
   *
-  *
-  *
+  * Return: a pointer to the duplicate string
   */
 char *_strdup(char *str)
 {
@@ -23,7 +24,7 @@ char *_strdup(char *str)
 	dup = malloc(sizeof(char) * len);
 	if (dup == NULL)
 		return (NULL);
-	
+
 	for (idx = 0; str[idx] != '\0'; idx++)
 	{
 		dup[idx] = str[idx];
