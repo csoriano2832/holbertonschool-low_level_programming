@@ -30,11 +30,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	fido->age = age;
 	fido->owner = owner;
 
-	name_copy = malloc(sizeof(_strlen(name)));
+	name_copy = malloc(sizeof(_strlen(name)) + 1);
 	if (name_copy == NULL)
 		return (NULL);
 
-	owner_copy = malloc(sizeof(_strlen(owner)));
+	owner_copy = malloc(sizeof(_strlen(owner)) + 1);
 	if (owner_copy == NULL)
 		return (NULL);
 
