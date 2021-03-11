@@ -96,7 +96,7 @@ void type_string(va_list args)
 
 	string = va_arg(args, char *);
 	if (string == NULL)
-		printf("(nil)");
-	else
-		printf("%s", string);
+		string = "(nil)";
+
+	printf("%s", string);
 }
