@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 
 	idx = 0;
-	while (format[idx] != '\0')
+	while (format != NULL && format[idx] != '\0')
 	{
 		jdx = 0;
 		while (arg_type[jdx].types != '\0')
