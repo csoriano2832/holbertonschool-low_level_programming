@@ -9,7 +9,7 @@
 /**
  * struct types - argument type struct
  *
- * @args: a character tied to a type of argument
+ * @types: a character tied to a type of argument
  * @func: the function associated
  */
 typedef struct types
