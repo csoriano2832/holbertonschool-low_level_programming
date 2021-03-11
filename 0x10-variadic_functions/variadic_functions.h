@@ -14,8 +14,8 @@
  */
 typedef struct types
 {
-	char *types;
-	void (*func)(char *c);
+	char types;
+	void (*func)(va_list *args);
 } types_t;
 
 /* Prototypes */
