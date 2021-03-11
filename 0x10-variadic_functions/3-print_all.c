@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
-void type_string(va_list *arg);
-void type_float(va_list *arg);
-void type_int(va_list *arg);
-void type_char(va_list *arg);
-
 /**
  * print_all - prints anything
  * @format: a list of types of arguments passed to the function
