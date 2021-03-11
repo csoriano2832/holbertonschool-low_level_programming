@@ -31,7 +31,7 @@ void print_all(const char * const format, ...)
 			if (format[idx] == arg_type[jdx].types)
 			{
 				printf("%s", separator);
-				arg_type[jdx].func(&args);
+				arg_type[jdx].func(args);
 				separator = ", ";
 			}
 			jdx++;
@@ -48,11 +48,11 @@ void print_all(const char * const format, ...)
  *
  * Return: nothing
  */
-void type_char(va_list *args)
+void type_char(va_list args)
 {
 	char letter;
 
-	letter = va_arg(*args, int);
+	letter = va_arg(args, int);
 	printf("%c", letter);
 }
 
@@ -62,11 +62,11 @@ void type_char(va_list *args)
  *
  * Return: nothing
  */
-void type_int(va_list *args)
+void type_int(va_list args)
 {
 	int number;
 
-	number = va_arg(*args, int);
+	number = va_arg(args, int);
 	printf("%i", number);
 }
 
@@ -76,11 +76,11 @@ void type_int(va_list *args)
  *
  * Return: nothing
  */
-void type_float(va_list *args)
+void type_float(va_list args)
 {
 	float decimal;
 
-	decimal = va_arg(*args, double);
+	decimal = va_arg(args, double);
 	printf("%f", decimal);
 }
 
@@ -90,11 +90,11 @@ void type_float(va_list *args)
  *
  * Return: nothing
  */
-void type_string(va_list *args)
+void type_string(va_list args)
 {
 	char *string;
 
-	string = va_arg(*args, char *);
+	string = va_arg(args, char *);
 	if (string == NULL)
 		printf("(nil)");
 	else
