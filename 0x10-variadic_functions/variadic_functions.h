@@ -15,7 +15,7 @@
 typedef struct types
 {
 	char *types;
-	void (*func)(char *c)
+	void (*func)(char *c);
 } types_t;
 
 /* Prototypes */
