@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int idx, jdx;
-	char *separator = ", ";
+	char *separator = "";
 	types_t arg_type[] = {
 		{'c', type_char},
 		{'i', type_int},
@@ -35,9 +35,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[idx] == arg_type[jdx].types)
 			{
+				printf("%s", separator);
 				arg_type[jdx].func(&args);
-				if (format[idx + 1] != '\0')
-					printf("%s", separator);
+				separator = ", ";
 			}
 			jdx++;
 		}
