@@ -1,12 +1,12 @@
-###0x12.C-Singly linked lists
+0x12.C-Singly linked lists
 
-##Learning Objectives
-#General
+Learning Objectives
+General
 -When and why using linked lists vs arrays
 -How to build and use linked lists
 
-##Requirements
-#General
+Requirements
+General
 -Allowed editors: vi, vim, emacs
 -All your files will be compiled on Ubuntu 14.04 LTS
 -Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
