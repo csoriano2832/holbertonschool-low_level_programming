@@ -49,28 +49,28 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 	* Install the linter with sudo ./install.sh
 	* emacs or vi a new file called betty, and copy the script below:
 
-	```
+```
 #!/bin/bash
 # Simply a wrapper script to keep you from having to use betty-style
 # and betty-doc separately on every item.
 # Originally by Tim Britton (@wintermanc3r), multiargument added by
 # Larry Madeo (@hillmonkey)
 
-	BIN_PATH="/usr/local/bin"
-	BETTY_STYLE="betty-style"
-	BETTY_DOC="betty-doc"
+BIN_PATH="/usr/local/bin"
+BETTY_STYLE="betty-style"
+BETTY_DOC="betty-doc"
 
-	if [ "$#" = "0" ]; then
+if [ "$#" = "0" ]; then
 	echo "No arguments passed."
 	exit 1
-	fi
+fi
 
-	for argument in "$@" ; do
+for argument in "$@" ; do
 	echo -e "\n========== $argument =========="
 	${BIN_PATH}/${BETTY_STYLE} "$argument"
 	${BIN_PATH}/${BETTY_DOC} "$argument"
-	done
-	```
+done
+```
 
 	* Once saved, exit file and change permissions to apply to all users with chmod a+x betty
 	* Move the betty file into /bin/ directory or somewhere else in your $PATH with sudo mv betty /bin/
@@ -85,15 +85,15 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 	* The C file name will be saved in the variable $CFILE
 	* The output should be saved in the file c
 
-	```
-	julien@ubuntu:~/c/0x00$ cat main.c 
+```
+julien@ubuntu:~/c/0x00$ cat main.c 
 #include <stdio.h>
 
-	/**
-	 * main - Entry point
-	 *
-	 * Return: Always 0 (Success)
-	 */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	return (0);
@@ -244,10 +244,10 @@ Write a C program that prints exactly with proper grammar, but the outcome is a 
 julien@ubuntu:~/c/0x00$ gcc -Wall 5-printf.c
 julien@ubuntu:~/c/0x00$ ./a.out 
 with proper grammar, but the outcome is a piece of art,
-     julien@ubuntu:~/c/0x00$ echo $?
-     0
-     julien@ubuntu:~/c/0x00$ 
-     ```
+julien@ubuntu:~/c/0x00$ echo $?
+0
+julien@ubuntu:~/c/0x00$ 
+```
 
 #### __6. Size is not grandeur, and territory does not make a nation__
      Write a C program that prints the size of various types on the computer it is compiled and run on.
