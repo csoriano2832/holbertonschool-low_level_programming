@@ -1,1 +1,1 @@
-# holbertonschool-low_level_programming
+This repo will focus on some basic C concepts.
