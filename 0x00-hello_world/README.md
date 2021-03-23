@@ -33,21 +33,21 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 ### Shell Scripts
 * Allowed editors: vi, vim, emacs
-	* All your scripts will be tested on Ubuntu 14.04 LTS
+* All your scripts will be tested on Ubuntu 14.04 LTS
 * All your scripts should be exactly two lines long ($ wc -l file should print 2)
-	* All your files should end with a new line
-	* The first line of all your files should be exactly #!/bin/bash
+* All your files should end with a new line
+* The first line of all your files should be exactly #!/bin/bash
 
 # More Info
 
 ## Betty linter
-	To run the Betty linter just with command betty <filename>:
+To run the Betty linter just with command betty <filename>:
 
-	* Go to the Betty repository
-	* Clone the repo to your local machine
-	* cd into the Betty directory
-	* Install the linter with sudo ./install.sh
-	* emacs or vi a new file called betty, and copy the script below:
+* Go to the Betty repository
+* Clone the repo to your local machine
+* cd into the Betty directory
+* Install the linter with sudo ./install.sh
+* emacs or vi a new file called betty, and copy the script below:
 
 ```
 #!/bin/bash
@@ -72,18 +72,18 @@ for argument in "$@" ; do
 done
 ```
 
-	* Once saved, exit file and change permissions to apply to all users with chmod a+x betty
-	* Move the betty file into /bin/ directory or somewhere else in your $PATH with sudo mv betty /bin/
+* Once saved, exit file and change permissions to apply to all users with chmod a+x betty
+* Move the betty file into /bin/ directory or somewhere else in your $PATH with sudo mv betty /bin/
 
-	You can now type betty <filename> to run the Betty linter!
+You can now type betty <filename> to run the Betty linter!
 
 # Tasks
 
 #### __0. Preprocessor__
-	Write a script that runs a C file through the preprocessor and save the result into another file.
+Write a script that runs a C file through the preprocessor and save the result into another file.
 
-	* The C file name will be saved in the variable $CFILE
-	* The output should be saved in the file c
+* The C file name will be saved in the variable $CFILE
+* The output should be saved in the file c
 
 ```
 julien@ubuntu:~/c/0x00$ cat main.c 
@@ -250,58 +250,58 @@ julien@ubuntu:~/c/0x00$
 ```
 
 #### __6. Size is not grandeur, and territory does not make a nation__
-     Write a C program that prints the size of various types on the computer it is compiled and run on.
+Write a C program that prints the size of various types on the computer it is compiled and run on.
 
-     * You should produce the exact same output as in the example
-     * Warnings are allowed
-     * Your program should return 0
-     * You might have to install the package libc6-dev-i386 on your Linux (Vagrant) to test the -m32 gcc option
+* You should produce the exact same output as in the example
+* Warnings are allowed
+* Your program should return 0
+* You might have to install the package libc6-dev-i386 on your Linux (Vagrant) to test the -m32 gcc option
 
-     ```
-     julien@ubuntu:~/c/0x00$ gcc 6-size.c -m32 -o size32 2> /tmp/32
-     julien@ubuntu:~/c/0x00$ gcc 6-size.c -m64 -o size64 2> /tmp/64
-	julien@ubuntu:~/c/0x00$ ./size32
-	Size of a char: 1 byte(s)
-	Size of an int: 4 byte(s)
-	Size of a long int: 4 byte(s)
-	Size of a long long int: 8 byte(s)
+```
+julien@ubuntu:~/c/0x00$ gcc 6-size.c -m32 -o size32 2> /tmp/32
+julien@ubuntu:~/c/0x00$ gcc 6-size.c -m64 -o size64 2> /tmp/64
+julien@ubuntu:~/c/0x00$ ./size32
+size of a char: 1 byte(s)
+Size of an int: 4 byte(s)
+Size of a long int: 4 byte(s)
+Size of a long long int: 8 byte(s)
 Size of a float: 4 byte(s)
-	julien@ubuntu:~/c/0x00$ ./size64
-	Size of a char: 1 byte(s)
-	Size of an int: 4 byte(s)
-	Size of a long int: 8 byte(s)
-	Size of a long long int: 8 byte(s)
+julien@ubuntu:~/c/0x00$ ./size64
+Size of a char: 1 byte(s)
+Size of an int: 4 byte(s)
+Size of a long int: 8 byte(s)
+Size of a long long int: 8 byte(s)
 Size of a float: 4 byte(s)
-	julien@ubuntu:~/c/0x00$ echo $?
-	0
-	julien@ubuntu:~/c/0x00$ 
-	```
+julien@ubuntu:~/c/0x00$ echo $?
+0
+julien@ubuntu:~/c/0x00$ 
+```
 
 #### __7. What happens when you type gcc main.c__
-	Write a blog post that explains all the steps of compilation. Use command lines and examples to illustrate.
+Write a blog post that explains all the steps of compilation. Use command lines and examples to illustrate.
 
-	* Use gcc as the compiler
-	* Have at least one picture, at the top of the blog post
-	* Publish your blog post on Medium or LinkedIn
-	* Share your blog post at least on LinkedIn
-	* Please, remember that these blogs must be written in English to further your technical ability in a variety of settings
+* Use gcc as the compiler
+* Have at least one picture, at the top of the blog post
+* Publish your blog post on Medium or LinkedIn
+* Share your blog post at least on LinkedIn
+* Please, remember that these blogs must be written in English to further your technical ability in a variety of settings
 
 #### __8. Intel__
-	Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
+Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
 
-	* The C file name will be saved in the variable $CFILE.
-	* The output file should be named the same as the C file, but with the extension .s instead of .c
+* The C file name will be saved in the variable $CFILE.
+* The output file should be named the same as the C file, but with the extension .s instead of .c
 
-	```
-	julien@ubuntu:~/c/0x00$ export CFILE=main.c
-	julien@ubuntu:~/c/0x00$ cat main.c
+```
+julien@ubuntu:~/c/0x00$ export CFILE=main.c
+julien@ubuntu:~/c/0x00$ cat main.c
 #include <stdio.h>
 
-	/**
-	 * main - Entry point
-	 *
-	 * Return: Always 0 (Success)
-	 */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	return (0);
