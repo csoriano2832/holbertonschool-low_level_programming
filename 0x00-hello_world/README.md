@@ -86,7 +86,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 	* The output should be saved in the file c
 
 	```
-	julien@ubuntu:~/c/0x00$ cat main.c
+	julien@ubuntu:~/c/0x00$ cat main.c 
 #include <stdio.h>
 
 	/**
@@ -99,7 +99,7 @@ int main(void)
 	return (0);
 }
 julien@ubuntu:~/c/0x00$ export CFILE=main.c
-julien@ubuntu:~/c/0x00$ ./0-preprocessor
+julien@ubuntu:~/c/0x00$ ./0-preprocessor 
 julien@ubuntu:~/c/0x00$ tail c
 # 942 "/usr/include/stdio.h" 3 4
 
@@ -134,13 +134,13 @@ int main(void)
 {
 	return (0);
 }
-julien@ubuntu:~/c/0x00$ ./1-compiler
+julien@ubuntu:~/c/0x00$ ./1-compiler 
 julien@ubuntu:~/c/0x00$ ls
 0-preprocessor  1-compiler   c            main.o
 Makefile               100-intel      main.c  main.s
 julien@ubuntu:~/c/0x00$ cat -v main.o | head
 ^?ELF^B^A^A^@^@^@^@^@^@^@^@^@^A^@>^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^P^B^@^@^@^@^@^@^@^@^@^@@^@^@^@^@^@@^@^K^@^H^@UHM-^IM-eM-8^@^@^@^@]M-C^@GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609^@^T^@^@^@^@^@^@^@^AzR^@^Ax^P^A^[^L^G^HM-^P^A^@^@^\^@^@^@^\^@^@^@^@^@^@^@^K^@^@^@^@A^N^PM-^F^BC^M^FF^L^G^H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^D^@M-qM-^?^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^B^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^E^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^F^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^C^@^D^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^H^@^@^@^R^@^A^@^@^@^@^@^@^@^@^@^K^@^@^@^@^@^@^@^@main.c^@main^@^@^@^@ ^@^@^@^@^@^@^@^B^@^@^@^B^@^@^@^@^@^@^@^@^@^@^@^@.symtab^@.strtab^@.shstrtab^@.text^@.data^@.bss^@.comment^@.note.GNU-stack^@.rela.eh_frame^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^[^@^@^@^A^@^@^@^F^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@@^@^@^@^@^@^@^@^K^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@!^@^@^@^A^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@K^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@'^@^@^@^H^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@K^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@,^@^@^@^A^@^@^@0^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@K^@^@^@^@^@^@^@5^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@5^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@J^@^@^@^A^@^@^@^B^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^@^@^@^@^@^@^@^@8^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^H^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@E^@^@^@^D^@^@^@@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M- ^A^@^@^@^@^@^@^X^@^@^@^@^@^@^@    ^@^@^@^F^@^@^@^H^@^@^@^@^@^@^@^X^@^@^@^@^@^@^@^Q^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-8^A^@^@^@^@^@^@T^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^B^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-8^@^@^@^@^@^@^@M-X^@^@^@^@^@^@^@
-^@^@^@^H^@^@^@^H^@^@^@^@^@^@^@^X^@^@^@^@^@^@^@  ^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^P^A^@^@^@^@^@^@^M^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@julien@ubuntu:~/c/0x00$
+^@^@^@^H^@^@^@^H^@^@^@^@^@^@^@^X^@^@^@^@^@^@^@  ^@^@^@^C^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@M-^P^A^@^@^@^@^@^@^M^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@julien@ubuntu:~/c/0x00$ 
 ```
 
 #### __2. Assembler__
@@ -188,7 +188,7 @@ ret
 .size   main, .-main
 .ident  "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"
 .section    .note.GNU-stack,"",@progbits
-julien@ubuntu:~/c/0x00$
+julien@ubuntu:~/c/0x00$ 
 ```
 
 #### __3. Name__
@@ -210,11 +210,11 @@ int main(void)
 {
 	return (0);
 }
-julien@ubuntu:~/c/0x00$ ./3-name
+julien@ubuntu:~/c/0x00$ ./3-name 
 julien@ubuntu:~/c/0x00$ ls
 0-preprocessor  1-compiler   3-name  cisfun  main.o  Makefile
 100-intel       2-assembler  c       main.c  main.s
-julien@ubuntu:~/c/0x00$
+julien@ubuntu:~/c/0x00$ 
 ```
 
 #### __4. Hello, puts__
@@ -229,7 +229,7 @@ julien@ubuntu:~/c/0x00$ gcc 4-puts.c && ./a.out
 "Programming is like building a multilingual puzzle
 julien@ubuntu:~/c/0x00$ echo $?
 0
-julien@ubuntu:~/c/0x00$
+julien@ubuntu:~/c/0x00$ 
 ```
 
 #### __5. Hello, printf__
@@ -242,11 +242,11 @@ Write a C program that prints exactly with proper grammar, but the outcome is a 
 
 ```
 julien@ubuntu:~/c/0x00$ gcc -Wall 5-printf.c
-julien@ubuntu:~/c/0x00$ ./a.out
+julien@ubuntu:~/c/0x00$ ./a.out 
 with proper grammar, but the outcome is a piece of art,
      julien@ubuntu:~/c/0x00$ echo $?
      0
-     julien@ubuntu:~/c/0x00$
+     julien@ubuntu:~/c/0x00$ 
      ```
 
 #### __6. Size is not grandeur, and territory does not make a nation__
@@ -274,7 +274,7 @@ Size of a float: 4 byte(s)
 Size of a float: 4 byte(s)
 	julien@ubuntu:~/c/0x00$ echo $?
 	0
-	julien@ubuntu:~/c/0x00$
+	julien@ubuntu:~/c/0x00$ 
 	```
 
 #### __7. What happens when you type gcc main.c__
@@ -306,7 +306,7 @@ int main(void)
 {
 	return (0);
 }
-julien@ubuntu:~/c/0x00$ ./100-intel
+julien@ubuntu:~/c/0x00$ ./100-intel 
 julien@ubuntu:~/c/0x00$ cat main.s
 .file   "main.c"
 .intel_syntax noprefix
@@ -330,7 +330,7 @@ ret
 .size   main, .-main
 .ident  "GCC: (Ubuntu 5.4.0-6ubuntu1~16.04.2) 5.4.0 20160609"
 .section    .note.GNU-stack,"",@progbits
-julien@ubuntu:~/c/0x00$
+julien@ubuntu:~/c/0x00$ 
 ```
 
 #### __9. UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity__
@@ -351,5 +351,5 @@ julien@ubuntu:~/c/0x00$ cat q
 and that piece of art is useful" - Dora Korpar, 2015-10-19
 julien@ubuntu:~/c/0x00$ grep printf < 101-quote.c
 julien@ubuntu:~/c/0x00$ grep put < 101-quote.c
-julien@ubuntu:~/c/0x00$
+julien@ubuntu:~/c/0x00$ 
 ```
