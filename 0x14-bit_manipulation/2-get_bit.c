@@ -9,34 +9,13 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int idx, length;
+	unsigned int idx;
 
-	length = countBits(n);
-
-	if (length - 1 < index)
+	if (index > sizeof(unsigned long int) * 8)
 		return (-1);
 
 	for (idx = 0; idx < index; idx++)
 		n = n >> 1;
 
 	return (n & 1);
-}
-
-/**
- * countBits - counts the length of a number represented in binary form
- * @n: a decimal number
- *
- * Return: the length of a binary number
- */
-unsigned int countBits(unsigned int n)
-{
-	int count = 0;
-
-	while (n)
-	{
-		count++;
-		n >>= 1;
-	}
-
-	return (count);
 }
