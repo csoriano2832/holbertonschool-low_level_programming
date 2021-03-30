@@ -7,6 +7,7 @@ int append_text_to_file(const char *filename, char *text_content);
  * main - copies the content of a file to another file
  * @ac: number of arguments
  * @av: string of arguments
+ *
  * Return: 0 on success
  */
 int main(int ac, char **av)
@@ -16,7 +17,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", av[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -30,6 +31,7 @@ int main(int ac, char **av)
 	file_to = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 00664);
 	if (file_to == -1)
 	{
+		close(file_from);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
