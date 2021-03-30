@@ -27,11 +27,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	bytes = read(fd, buf, letters);
 
-	close(fd);
-
 	/* WRITE TO OUTPUT */
-	write(STDOUT_FILENO, buf, letters);
+	write(STDOUT_FILENO, buf, bytes);
 
+	close(fd);
 	free(buf);
 	return (bytes);
 }
