@@ -12,7 +12,7 @@ int append_text_to_file(const char *filename, char *text_content);
 int main(int ac, char **av)
 {
 	int file_from, file_to, bytes_read = 0, bytes_written = 0;
-	char buf[1024];
+	char *buf[1024];
 
 	if (ac != 3)
 	{
@@ -49,7 +49,7 @@ int main(int ac, char **av)
 			exit(99);
 		}
 
-	} while (bytes_read == 1024);
+	} while (bytes_written == 1024);
 
 	close(file_from);
 	if (file_from == -1)
