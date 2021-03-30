@@ -24,7 +24,6 @@ int main(int ac, char **av)
 	file_from = open(av[1], O_RDONLY);
 	if (file_from == -1)
 	{
-		close(file_from);
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
@@ -33,7 +32,6 @@ int main(int ac, char **av)
 	if (file_to == -1)
 	{
 		close(file_from);
-		close(file_to);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
@@ -47,7 +45,7 @@ int main(int ac, char **av)
 		}
 
 		bytes_written = write(file_to, buf, bytes_read);
-		if (bytes_written < bytes_read)
+		if (bytes_written == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
