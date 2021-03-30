@@ -15,7 +15,7 @@ int append_text_to_file(const char *filename, char *text_content);
 int main(int ac, char **av)
 {
 	int file_from, file_to;
-	size_t bytes;
+	size_t bytes = 0;
 	char buf[1024];
 
 	if (ac != 3)
@@ -24,7 +24,6 @@ int main(int ac, char **av)
 		exit(97);
 	}
 
-	/* READING FROM FILE */
 	file_from = open(av[1], O_RDONLY);
 	if (file_from == -1)
 	{
@@ -41,7 +40,6 @@ int main(int ac, char **av)
 		exit(100);
 	}
 
-	/* WRITING TO FILE */
 	file_to = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 00664);
 	if (file_to == -1)
 	{
