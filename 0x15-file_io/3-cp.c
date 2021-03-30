@@ -12,7 +12,7 @@ int append_text_to_file(const char *filename, char *text_content);
  */
 int main(int ac, char **av)
 {
-	int file_from, file_to, bytes_read = 0, bytes_written = 0;
+	int file_from, file_to, bytes_read = 0;
 	char *buf[1024];
 
 	if (ac != 3)
@@ -44,24 +44,21 @@ int main(int ac, char **av)
 			exit(98);
 		}
 
-		bytes_written = write(file_to, buf, bytes_read);
-		if (bytes_written == -1)
+		if ((write(file_to, buf, bytes_read)) == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
 
-	} while (bytes_written == 1024);
+	} while (bytes_read == 1024);
 
-	close(file_from);
-	if (file_from == -1)
+	if ((close(file_from)) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file_from);
 		exit(100);
 	}
 
-	close(file_to);
-	if (file_to == -1)
+	if ((close(file_to)) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file_to);
 		exit(100);
