@@ -1,30 +1,33 @@
 #include "lists.h"
 
 /**
-  * insert_nodeint_at_index - inserts a new node at a given position
-  * @head: the first element of a linked list
+  * insert_dnodeint_at_index - inserts a new node at a given position
+  * @h: the first element of a linked list
   * @idx: the index of the list where new node should be added
-  * @data: an int value to be stored in the new node
+  * @n: an int value to be stored in the new node
   *
   * Return: the address of the new node, or NULL if it failed
   */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int data)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int index = 0;
 	dlistint_t *new;
-	dlistint_t *tmp = *head;
+	dlistint_t *tmp = *h;
+
+	if (h == NULL)
+		return (NULL);
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
-	new->n = data;
+	new->n = n;
 
 	if (idx == 0)
 	{
-		new->next = *head;
+		new->next = *h;
 		new->prev = NULL;
-		(*head)->prev = new;
-		*head = new;
+		(*h)->prev = new;
+		*h = new;
 		return (new);
 	}
 
